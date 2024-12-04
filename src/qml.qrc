@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/DonutCarMonitor">
+        <file>main.qml</file>
+        <file>main.cpp</file>
+        <file>qml.qrc</file>
+    </qresource>
+</RCC>
