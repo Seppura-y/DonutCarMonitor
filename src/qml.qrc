@@ -3,5 +3,11 @@
         <file>main.qml</file>
         <file>main.cpp</file>
         <file>qml.qrc</file>
+        <file>components/AirCondBar.qml</file>
+        <file>hmi/Aircond.qml</file>
+        <file>hmi/App.qml</file>
+        <file>hmi/ControlCenter.qml</file>
+        <file>hmi/Home.qml</file>
+        <file>hmi/Setting.qml</file>
     </qresource>
 </RCC>

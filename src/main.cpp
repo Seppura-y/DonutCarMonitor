@@ -19,6 +19,7 @@ int main(int argc, char **argv)
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
 
+    app.setWindowIcon(QIcon(":images/images/Home/vehicle.png"));
     engine.rootContext()->setContextProperty("ui", INTERFACE);
     engine.load(url);
 
