@@ -7,6 +7,7 @@ Interface::Interface(QObject* parent)
     : QObject{parent}
 {
     page_index_ = -1;
+    previous_page_index_ = -1;
     ac_left_temperature_ = 26;
     ac_right_temperature_ = 26;
 

@@ -639,7 +639,7 @@ Item
 
 			horizontalAlignment: Text.AlignHCenter
 			verticalAlignment: Text.AlignVCenter
-			text: qsTr("267")
+			text: qsTr("124")
 			color: "#FFFFFF"
 			font.pixelSize: 24
 			font.bold: true

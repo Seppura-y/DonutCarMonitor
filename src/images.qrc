@@ -61,5 +61,19 @@
         <file>images/StatusBar/position.png</file>
         <file>images/StatusBar/signal.png</file>
         <file>images/StatusBar/status_bar_background.png</file>
+        <file>images/App/DayOne.png</file>
+        <file>images/App/Duolinguo.png</file>
+        <file>images/App/Maps.png</file>
+        <file>images/App/Messenger.png</file>
+        <file>images/App/Mimo.png</file>
+        <file>images/App/Music.png</file>
+        <file>images/App/Notability.png</file>
+        <file>images/App/Picstart.png</file>
+        <file>images/App/Podcast.png</file>
+        <file>images/App/Spark.png</file>
+        <file>images/App/Spotify.png</file>
+        <file>images/App/Swift.png</file>
+        <file>images/App/Vectornator.png</file>
+        <file>images/App/Calculator.png</file>
     </qresource>
 </RCC>
