@@ -1,5 +1,6 @@
 ﻿import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls.Basic
 
 import "../components"
 
@@ -105,8 +106,7 @@ Item
 				anchors.topMargin: 20
 
 				source: "qrc:/images/images/Home/voice_assistant.png"
-				fillMode: Image.preserveAspectFit
-				opacity: parent.down ? 0.6 : 1
+				fillMode: Image.PreserveAspectFit
 			}
 		} // backgroundImage
 
@@ -143,6 +143,144 @@ Item
 		}
 
 	}// voiceAssistantButton
+
+	Button
+	{
+		id: weatherButton
+		width: 627
+		height: 120
+
+		anchors.left: parent.left
+		anchors.leftMargin: 551
+		anchors.top: parent.top
+		anchors.topMargin: 67
+
+		hoverEnabled: false
+
+		background: Image
+		{
+			width: parent.width
+			height: parent.height
+			anchors.centerIn: parent
+
+			source: "qrc:/images/images/Home/weather_background.png"
+
+			fillMode: Image.PreserveAspectFit
+			opacity: parent.down ? 0.6 : 1
+
+			Image
+			{
+				id: weatherImage
+				width: 76
+				height: 65
+
+				anchors.left: parent.left
+				anchors.leftMargin: 44
+				anchors.top: parent.top
+				anchors.topMargin: 28
+
+				source: "qrc:/images/images/Home/Weather/sun_clouds.png"
+				fillMode: Image.PreserveAspectFit
+			}
+		} // background image
+
+		Label
+		{
+			id: regionLabel
+			width: 135
+			height: 26
+
+			anchors.left: parent.left
+			anchors.leftMargin: 172
+			anchors.top: parent.top
+			anchors.topMargin: 30
+
+			horizontalAlignment: Text.AlignHCenter
+			verticalAlignment: Text.AlignVCenter
+
+			text: qsTr("佛山市 南海区")
+			color: "#FFFFFF"
+			font.pixelSize: 18
+		}
+
+		Label
+		{
+			id: weatherLabel
+			width: 135
+			height: 26
+		
+			anchors.left: parent.left
+			anchors.leftMargin: 172
+			anchors.top: parent.top
+			anchors.topMargin: 64
+		
+			horizontalAlignment: Text.AlignHCenter
+			verticalAlignment: Text.AlignVCenter
+		
+			text: qsTr("晴转多云")
+			color: "#FFFFFF"
+			opacity: 0.6
+			font.pixelSize: 18
+		} // weatherLabel
+
+		Rectangle
+		{
+			width: 3
+			height: 55
+			
+			anchors.left: parent.left
+			anchors.leftMargin: 356
+			anchors.top: parent.top
+			anchors.topMargin: 31
+
+			color: "#2C333E"
+		} // seperator
+
+		Label
+		{
+			id: airQualityTipsLabel
+
+			anchors.left: parent.left
+			anchors.leftMargin: 412
+			anchors.top: parent.top
+			anchors.topMargin: 30
+
+			text: qsTr("空气质量")
+			color: "#FFFFFF"
+
+			font.pixelSize: 18
+		}
+
+		Label
+		{
+			id: airQualityLabel
+
+			anchors.left: parent.left
+			anchors.leftMargin: 494
+			anchors.top: parent.top
+			anchors.topMargin: 30
+
+			text: qsTr("优")
+			color: "#2D7B87"
+			
+			font.pixelSize: 18
+		}
+
+		Label
+		{
+			id: temperatureLabel
+		
+			anchors.left: parent.left
+			anchors.leftMargin: 412
+			anchors.top: parent.top
+			anchors.topMargin: 64
+		
+			text: qsTr("车内 20 车外 120")
+			color: "#FFFFFF"
+			opacity: 0.6
+			font.pixelSize: 18
+		} // temperatureLabel
+	} // weather
 
 	Label
 	{
