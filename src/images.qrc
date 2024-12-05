@@ -57,5 +57,9 @@
         <file>images/ACBar/model.png</file>
         <file>images/ACBar/music.png</file>
         <file>images/ACBar/navigation.png</file>
+        <file>images/StatusBar/bluetooth.png</file>
+        <file>images/StatusBar/position.png</file>
+        <file>images/StatusBar/signal.png</file>
+        <file>images/StatusBar/status_bar_background.png</file>
     </qresource>
 </RCC>

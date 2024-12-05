@@ -1,4 +1,5 @@
 #include "interface.h"
+#include <QDateTime>
 
 Q_GLOBAL_STATIC(Interface, interface)
 
@@ -8,11 +9,44 @@ Interface::Interface(QObject* parent)
     page_index_ = -1;
     ac_left_temperature_ = 26;
     ac_right_temperature_ = 26;
+
+    control_center_bluetooth_status_ = true;
+    control_center_position_status_ = true;
+    control_center_wlan_status_ = true;
+
+    update_timer_ = new QTimer();
+    update_timer_->start(100);
+    QObject::connect(update_timer_, &QTimer::timeout, this, &Interface::onUpdateTimer);
 }
 
 Interface* Interface::getInstance()
 {
     return interface;
+}
+
+void Interface::onUpdateTimer()
+{
+    QDateTime current_date_time = QDateTime::currentDateTime();
+
+    QTime current_time = current_date_time.time();
+    QDate current_date = current_date_time.date();
+    QString time = current_time.toString("HH:mm");
+    QString date = current_date.toString("M月d日");
+
+    int week = current_date.dayOfWeek();
+    QString week_string;
+    switch (week)
+    {
+        case Qt::Sunday:    week_string = " 星期日"; break;
+        case Qt::Monday:    week_string = " 星期一"; break;
+        case Qt::Tuesday:   week_string = " 星期二"; break;
+        case Qt::Wednesday: week_string = " 星期三"; break;
+        case Qt::Thursday:  week_string = " 星期四"; break;
+        case Qt::Friday:    week_string = " 星期五"; break;
+        case Qt::Saturday:  week_string = " 星期六"; break;
+    }
+    date.append(week_string);
+    emit updateDateTime(date, time);
 }
 
 int Interface::getPageIndex() const
@@ -111,6 +145,51 @@ void Interface::setACRightTemperature(int val)
     }
     ac_right_temperature_ = val;
     emit acRightTemperatureChanged();
+}
+
+bool Interface::getControlCenterPositionStatus()
+{
+    return control_center_position_status_;
+}
+
+void Interface::setControlCenterPositionStatus(bool status)
+{
+    if (control_center_position_status_ == status)
+    {
+        return;
+    }
+    control_center_position_status_ = status;
+    emit controlCenterPositionStatusChanged();
+}
+
+bool Interface::getControlCenterWLANStatus()
+{
+    return control_center_wlan_status_;
+}
+
+void Interface::setControlCenterWLANStatus(bool status)
+{
+    if (control_center_wlan_status_ == status)
+    {
+        return;
+    }
+    control_center_wlan_status_ = status;
+    emit controlCenterWLANStatusChanged();
+}
+
+bool Interface::getControlCenterBluetoothStatus()
+{
+    return control_center_bluetooth_status_;
+}
+
+void Interface::setControlCenterBluetoothStatus(bool status)
+{
+    if (control_center_bluetooth_status_ == status)
+    {
+        return;
+    }
+    control_center_bluetooth_status_ = status;
+    emit controlCenterBluetoothStatusChanged();
 }
 
 int Interface::getSettingPageIndex()

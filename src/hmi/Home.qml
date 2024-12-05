@@ -32,6 +32,35 @@ Item
 		easing.type: Easing.OutQuad
 	}
 
+	StatusBar
+	{
+		id: statusBar
+		width: parent.width
+		height: 46
+
+		anchors.left: parent.left
+		anchors.top: parent.top
+
+		positionStatus: ui.controlCenterPositionStatus
+		bluetoothStatus: ui.controlCenterBluetoothStatus
+		signalStatus: ui.controlCenterWLANStatus
+
+		onPositionStatusChanged:
+		{
+			ui.controlCenterPositionStatus = positionStatus
+		}
+
+		onBluetoothStatusChanged:
+		{
+			ui.controlCenterBluetoothStatus = bluetoothStatus
+		}
+
+		onSignalStatusChanged:
+		{
+			ui.controlCenterWLANStatus = signalStatus
+		}
+	} // StatusBar
+
 	AirCondFanSlider
 	{
 		id: acFan

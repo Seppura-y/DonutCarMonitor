@@ -2,6 +2,7 @@
 #define INTERFACE_H
 
 #include <QObject>
+#include <QTimer>
 
 #define INTERFACE (Interface::getInstance())
 class Interface : public QObject
@@ -33,12 +34,29 @@ public:
 
 	int getACRightTemperature();
 	void setACRightTemperature(int val);
+
+	bool getControlCenterPositionStatus();
+	void setControlCenterPositionStatus(bool status);
+	bool getControlCenterWLANStatus();
+	void setControlCenterWLANStatus(bool status);
+	bool getControlCenterBluetoothStatus();
+	void setControlCenterBluetoothStatus(bool status);
 signals:
 	void pageIndexChanged();
 	void previousPageIndexChanged();
+
 	void acFanLevelChanged();
 	void acLeftTemperatureChanged();
 	void acRightTemperatureChanged();
+
+	void controlCenterPositionStatusChanged();
+	void controlCenterWLANStatusChanged();
+	void controlCenterBluetoothStatusChanged();
+
+	void updateDateTime(QString data, QString time);
+
+private slots:
+	void onUpdateTimer();
 public:
 
 private:
@@ -54,6 +72,12 @@ private:
 	int ac_fan_level_;
 	int ac_left_temperature_;
 	int ac_right_temperature_;
+
+	bool control_center_wlan_status_;
+	bool control_center_bluetooth_status_;
+	bool control_center_position_status_;
+
+	QTimer* update_timer_;
 private:
 	Q_PROPERTY(int pageIndex				READ getPageIndex				WRITE setPageIndex			NOTIFY pageIndexChanged FINAL)
 	Q_PROPERTY(int previousPageIndex		READ getPreviousPageIndex		WRITE setPreviousPageIndex	NOTIFY previousPageIndexChanged FINAL)
@@ -67,6 +91,11 @@ private:
 	Q_PROPERTY(int acFanLevel				READ getACFanLevel				WRITE setACFanLevel			NOTIFY acFanLevelChanged FINAL)
 	Q_PROPERTY(int acLeftTemperature		READ getACLeftTemperature		WRITE setACLeftTemperature	NOTIFY acLeftTemperatureChanged FINAL)
 	Q_PROPERTY(int acRightTemperature		READ getACRightTemperature		WRITE setACRightTemperature NOTIFY acRightTemperatureChanged FINAL)
+
+	Q_PROPERTY(int controlCenterWLANStatus			READ getControlCenterWLANStatus				WRITE setControlCenterWLANStatus		NOTIFY controlCenterWLANStatusChanged		FINAL)
+	Q_PROPERTY(int controlCenterBluetoothStatus		READ getControlCenterBluetoothStatus		WRITE setControlCenterBluetoothStatus	NOTIFY controlCenterBluetoothStatusChanged	FINAL)
+	Q_PROPERTY(int controlCenterPositionStatus		READ getControlCenterPositionStatus			WRITE setControlCenterPositionStatus	NOTIFY controlCenterPositionStatusChanged	FINAL)
+
 };
 
 #endif

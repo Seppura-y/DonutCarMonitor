@@ -11,5 +11,6 @@
         <file>components/AirCondControlBar.qml</file>
         <file>components/AirCondFanSlider.qml</file>
         <file>components/Navigation.qml</file>
+        <file>components/StatusBar.qml</file>
     </qresource>
 </RCC>
