@@ -1,4 +1,4 @@
-#include "interface.h"
+ï»¿#include "interface.h"
 #include <QDateTime>
 
 Q_GLOBAL_STATIC(Interface, interface)
@@ -31,19 +31,19 @@ void Interface::onUpdateTimer()
     QTime current_time = current_date_time.time();
     QDate current_date = current_date_time.date();
     QString time = current_time.toString("HH:mm");
-    QString date = current_date.toString("MÔÂdÈÕ");
+    QString date = current_date.toString("Mæœˆdæ—¥");
 
     int week = current_date.dayOfWeek();
     QString week_string;
     switch (week)
     {
-        case Qt::Sunday:    week_string = " ĞÇÆÚÈÕ"; break;
-        case Qt::Monday:    week_string = " ĞÇÆÚÒ»"; break;
-        case Qt::Tuesday:   week_string = " ĞÇÆÚ¶ş"; break;
-        case Qt::Wednesday: week_string = " ĞÇÆÚÈı"; break;
-        case Qt::Thursday:  week_string = " ĞÇÆÚËÄ"; break;
-        case Qt::Friday:    week_string = " ĞÇÆÚÎå"; break;
-        case Qt::Saturday:  week_string = " ĞÇÆÚÁù"; break;
+        case Qt::Sunday:    week_string = " æ˜ŸæœŸæ—¥"; break;
+        case Qt::Monday:    week_string = " æ˜ŸæœŸä¸€"; break;
+        case Qt::Tuesday:   week_string = " æ˜ŸæœŸäºŒ"; break;
+        case Qt::Wednesday: week_string = " æ˜ŸæœŸä¸‰"; break;
+        case Qt::Thursday:  week_string = " æ˜ŸæœŸå››"; break;
+        case Qt::Friday:    week_string = " æ˜ŸæœŸäº”"; break;
+        case Qt::Saturday:  week_string = " æ˜ŸæœŸå…­"; break;
     }
     date.append(week_string);
     emit updateDateTime(date, time);

@@ -36,10 +36,7 @@ Window
         height: parent.height
         anchors.left: parent.left
         anchors.top: parent.top
-
     }
-
-
 
     onPageIndexChanged:
     {
