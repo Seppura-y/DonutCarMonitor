@@ -33,6 +33,20 @@ void Interface::setPageIndex(int index)
     emit pageIndexChanged();
 }
 
+int Interface::getPreviousPageIndex() const
+{
+    return previous_page_index_;
+}
+
+void Interface::setPreviousPageIndex(int index)
+{
+    if (previous_page_index_ == index)
+    {
+        return;
+    }
+    previous_page_index_ = index;
+}
+
 int Interface::getHomePageIndex()
 {
     return s_page_home_;

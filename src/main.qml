@@ -16,32 +16,30 @@ Window
     property int pageIndex: ui.pageIndex
     property int previousPageIndex: 0
 
+    Image
+    {
+        id: backgroundImage
+        anchors.fill: parent
+        source: "qrc:/images/images/Home/base.png"
+        fillMode: Image.PreserveAspectCrop
+    }
+
     Loader
     {
         id: pageLoader
-        anchors.fill: parent
     }
 
-    AirCondFanSlider
+    Navigation
     {
-        id: acFan
-        width: 723
-        height: 71
-        x: 323 + 108
-        y: 617
-    }
-
-    AirCondControlBar
-    {
-        width: 1305
-        height: 123
+        id: navigation
+        width: 108
+        height: parent.height
         anchors.left: parent.left
-        anchors.leftMargin: 55
         anchors.top: parent.top
-        anchors.topMargin: 707
 
-        onFan: acFan.opened ? acFan.close() : acFan.open()
     }
+
+
 
     onPageIndexChanged:
     {

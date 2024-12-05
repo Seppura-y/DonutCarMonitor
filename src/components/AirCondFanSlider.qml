@@ -30,7 +30,7 @@ Popup
             from: 0.0
             to: 1.0
             duration: 300
-            easing: Easing.OutQuad
+            easing.type: Easing.OutQuad
         }
     }
 
@@ -42,7 +42,7 @@ Popup
             from: 1.0
             to: 0.0
             duration: 300
-            easing: Easing.OutQuad
+            easing.type: Easing.OutQuad
         }
     }
 

@@ -16,6 +16,9 @@ public:
 	int getPageIndex() const; 
 	void setPageIndex(int index);
 
+	int getPreviousPageIndex() const;
+	void setPreviousPageIndex(int index);
+
 	static int getHomePageIndex();
 	static int getAppPageIndex();
 	static int getSettingPageIndex();
@@ -32,6 +35,7 @@ public:
 	void setACRightTemperature(int val);
 signals:
 	void pageIndexChanged();
+	void previousPageIndexChanged();
 	void acFanLevelChanged();
 	void acLeftTemperatureChanged();
 	void acRightTemperatureChanged();
@@ -51,7 +55,8 @@ private:
 	int ac_left_temperature_;
 	int ac_right_temperature_;
 private:
-	Q_PROPERTY(int pageIndex				READ getPageIndex				WRITE setPageIndex NOTIFY pageIndexChanged FINAL)
+	Q_PROPERTY(int pageIndex				READ getPageIndex				WRITE setPageIndex			NOTIFY pageIndexChanged FINAL)
+	Q_PROPERTY(int previousPageIndex		READ getPreviousPageIndex		WRITE setPreviousPageIndex	NOTIFY previousPageIndexChanged FINAL)
 
 	Q_PROPERTY(int pageHome					READ getHomePageIndex			CONSTANT FINAL)
 	Q_PROPERTY(int pageApp					READ getAppPageIndex			CONSTANT FINAL)
