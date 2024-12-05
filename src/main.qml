@@ -1,7 +1,10 @@
 import QtQuick
+
 import Donut.DonutCarMonitor 1.0
 
+
 import "./hmi"
+import "./components"
 
 Window
 {
@@ -10,7 +13,7 @@ Window
     visible: true
     title: qsTr("DonutCarMonitor")
 
-    property int pageIndex: ui.page_index_
+    property int pageIndex: ui.pageIndex
     property int previousPageIndex: 0
 
     Loader
@@ -19,36 +22,42 @@ Window
         anchors.fill: parent
     }
 
+    AirCondFanSlider
+    {
+        id: acFan
+        width: 723
+        height: 71
+        x: 323 + 108
+        y: 617
+    }
+
+    AirCondControlBar
+    {
+        width: 1305
+        height: 123
+        anchors.left: parent.left
+        anchors.leftMargin: 55
+        anchors.top: parent.top
+        anchors.topMargin: 707
+
+        onFan: acFan.opened ? acFan.close() : acFan.open()
+    }
+
     onPageIndexChanged:
     {
         console.log("onPageIndexChanged:" + pageIndex)
         switch(pageIndex)
         {
-            case ui.s_page_home_:           pageLoader.source = "hmi/Home.qml"; break;
-            case ui.s_page_air_cond_:       pageLoader.source = "hmi/Aircond.qml"; break;
-            case ui.s_page_control_center_: pageLoader.source = "hmi/ControlCenter.qml"; break;
-            case ui.s_page_setting_:        pageLoader.source = "hmi/Setting.qml"; break;
-            case ui.s_page_app_:            pageLoader.source = "hmi/App.qml"; break;
-        }
-    }
-
-    MouseArea
-    {
-        anchors.fill: parent
-    
-        onClicked:
-        {
-            pageIndex++
-            if(pageIndex > 4)
-            {
-                pageIndex = 0
-            }
-            ui.page_index_ = pageIndex
+            case ui.pageHome:           pageLoader.source = "hmi/Home.qml"; break;
+            case ui.pageAirCond:        pageLoader.source = "hmi/Aircond.qml"; break;
+            case ui.pageControlCenter:  pageLoader.source = "hmi/ControlCenter.qml"; break;
+            case ui.pageSetting:        pageLoader.source = "hmi/Setting.qml"; break;
+            case ui.pageApp:            pageLoader.source = "hmi/App.qml"; break;
         }
     }
 
     Component.onCompleted:
     {
-        ui.page_index_ = ui.s_page_home_
+        ui.pageIndex = ui.pageHome
     }
 }

@@ -6,6 +6,8 @@ Interface::Interface(QObject* parent)
     : QObject{parent}
 {
     page_index_ = -1;
+    ac_left_temperature_ = 26;
+    ac_right_temperature_ = 26;
 }
 
 Interface* Interface::getInstance()
@@ -49,6 +51,52 @@ int Interface::getControlCenterPageIndex()
 int Interface::getAirCondPageIndex()
 {
     return s_page_air_cond_;
+}
+
+int Interface::getACFanLevel()
+{
+    return ac_fan_level_;
+}
+
+void Interface::setACFanLevel(int val)
+{
+    if (ac_fan_level_ == val)
+    {
+        return;
+    }
+
+    ac_fan_level_ = val;
+    emit acFanLevelChanged();
+}
+
+int Interface::getACLeftTemperature()
+{
+    return ac_left_temperature_;
+}
+
+void Interface::setACLeftTemperature(int val)
+{
+    if (ac_left_temperature_ == val)
+    {
+        return;
+    }
+    ac_left_temperature_ = val;
+    emit acLeftTemperatureChanged();
+}
+
+int Interface::getACRightTemperature()
+{
+    return ac_right_temperature_;
+}
+
+void Interface::setACRightTemperature(int val)
+{
+    if (ac_right_temperature_ == val)
+    {
+        return;
+    }
+    ac_right_temperature_ = val;
+    emit acRightTemperatureChanged();
 }
 
 int Interface::getSettingPageIndex()

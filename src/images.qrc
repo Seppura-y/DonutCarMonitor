@@ -46,5 +46,16 @@
         <file>images/Home/AC/music.png</file>
         <file>images/Home/AC/navigation.png</file>
         <file>images/Home/Weather/sun_clouds.png</file>
+        <file>images/ACFan/fan_add.png</file>
+        <file>images/ACFan/fan_sub.png</file>
+        <file>images/ACBar/arrow_down.png</file>
+        <file>images/ACBar/arrow_up.png</file>
+        <file>images/ACBar/blow.png</file>
+        <file>images/ACBar/contact.png</file>
+        <file>images/ACBar/defrost.png</file>
+        <file>images/ACBar/fan.png</file>
+        <file>images/ACBar/model.png</file>
+        <file>images/ACBar/music.png</file>
+        <file>images/ACBar/navigation.png</file>
     </qresource>
 </RCC>

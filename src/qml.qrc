@@ -2,12 +2,13 @@
     <qresource prefix="/DonutCarMonitor">
         <file>main.qml</file>
         <file>main.cpp</file>
-        <file>qml.qrc</file>
-        <file>components/AirCondBar.qml</file>
         <file>hmi/Aircond.qml</file>
         <file>hmi/App.qml</file>
         <file>hmi/ControlCenter.qml</file>
         <file>hmi/Home.qml</file>
         <file>hmi/Setting.qml</file>
+        <file>components/ColorSlider.qml</file>
+        <file>components/AirCondControlBar.qml</file>
+        <file>components/AirCondFanSlider.qml</file>
     </qresource>
 </RCC>
