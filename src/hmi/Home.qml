@@ -71,6 +71,79 @@ Item
 		}
 	} // StatusBar
 
+	Button
+	{
+		id: voiceAssistantButton
+		width: 444
+		height: 120
+
+		anchors.left: parent.left
+		anchors.leftMargin: 79
+		anchors.top: parent.top
+		anchors.topMargin: 67
+		hoverEnabled: false
+
+		background: Image
+		{
+			width: parent.width
+			height: parent.height
+			anchors.centerIn: parent
+
+			source: "qrc:/images/images/Home/voice_assistant_background.png"
+			fillMode: Image.PreserveAspectFit
+			opacity: parent.down ? 0.6 : 1
+
+			Image
+			{
+				id: voiceAssistantImage
+				width: 86
+				height: 86
+				
+				anchors.left: parent.left
+				anchors.leftMargin: 17
+				anchors.top: parent.top
+				anchors.topMargin: 20
+
+				source: "qrc:/images/images/Home/voice_assistant.png"
+				fillMode: Image.preserveAspectFit
+				opacity: parent.down ? 0.6 : 1
+			}
+		} // backgroundImage
+
+		Label
+		{
+			id: voiceTipsLabel
+			width: 220
+			height: 26
+
+			anchors.left: parent.left
+			anchors.leftMargin: 118
+			anchors.top: parent.top
+			anchors.topMargin: 30
+
+			text: qsTr("你可以这样说:")
+			color: "#9AFFFFFF"
+			font.pixelSize: 16
+		}
+
+		Label
+		{
+			id: voiceAssistantLabel
+			width: 220
+			height: 26
+
+			anchors.left: parent.left
+			anchors.leftMargin: 118
+			anchors.top: parent.top
+			anchors.topMargin: 63
+
+			text: qsTr("小迪去公司的路况怎么样？")
+			color: "#FFFFFF"
+			font.pixelSize: 18
+		}
+
+	}// voiceAssistantButton
+
 	Label
 	{
 		id: timeLabel
