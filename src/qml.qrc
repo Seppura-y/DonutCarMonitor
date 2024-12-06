@@ -13,5 +13,7 @@
         <file>components/Navigation.qml</file>
         <file>components/StatusBar.qml</file>
         <file>components/IconButton.qml</file>
+        <file>components/TemperatureList.qml</file>
+        <file>components/ParticleWindSystem.qml</file>
     </qresource>
 </RCC>

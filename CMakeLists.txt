@@ -11,6 +11,7 @@ find_package(Qt6 6.6 REQUIRED COMPONENTS
     Core
     Qml
     Quick 
+    
     Quick3D
     Quick3DHelpers
     Quick3DEffects

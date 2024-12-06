@@ -8,8 +8,8 @@ Interface::Interface(QObject* parent)
 {
     page_index_ = -1;
     previous_page_index_ = -1;
-    ac_left_temperature_ = 26;
-    ac_right_temperature_ = 26;
+    ac_left_temperature_ = 23;
+    ac_right_temperature_ = 23;
 
     control_center_bluetooth_status_ = true;
     control_center_position_status_ = true;
