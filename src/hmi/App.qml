@@ -20,6 +20,18 @@ Item
 		fillMode: Image.PreserveAspectFit
 	}
 
+	PropertyAnimation
+	{
+		id: fadeInAni
+		target: parent
+		properties: "opacity"
+		from: 0
+		to: 1
+		duration: 600
+		easing.type: Easing.OutQuad
+	}
+	Component.onCompleted: fadeInAni.start()
+
 	StatusBar
 	{
 		id: statusBar

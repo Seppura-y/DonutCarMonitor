@@ -75,5 +75,15 @@
         <file>images/App/Swift.png</file>
         <file>images/App/Vectornator.png</file>
         <file>images/App/Calculator.png</file>
+        <file>images/AC/fog.png</file>
+        <file>images/AC/function_off.png</file>
+        <file>images/AC/function_on.png</file>
+        <file>images/AC/inner.png</file>
+        <file>images/AC/left_temperatur_background.png</file>
+        <file>images/AC/line_h.png</file>
+        <file>images/AC/line_v.png</file>
+        <file>images/AC/mask_h.png</file>
+        <file>images/AC/mask_v.png</file>
+        <file>images/AC/right_temperatur_background.png</file>
     </qresource>
 </RCC>

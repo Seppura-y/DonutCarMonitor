@@ -39,9 +39,10 @@ Item
 		properties: "opacity"
 		from: 0
 		to: 1
-		duration: 300
+		duration: 600
 		easing.type: Easing.OutQuad
 	}
+	Component.onCompleted: fadeInAni.start()
 
 	StatusBar
 	{
