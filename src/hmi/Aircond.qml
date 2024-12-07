@@ -1,4 +1,4 @@
-import QtQuick
+﻿import QtQuick
 
 import "../components"
 
@@ -11,7 +11,7 @@ Item
 	height: 856
 	x: 108
 	y: 0
-	property int leftPercentX: 0
+	property int leftPercentX: 85
 	property int leftPercentY: 100
 	property int rightPercentX: 0
 	property int rightPercentY: 100
@@ -123,6 +123,24 @@ Item
 		onFan: acFan.opened ? acFan.close() : acFan.open()
 	}
 
+	FunctionsBar
+	{
+		width: 882
+		height: 70
+
+		anchors.left: parent.left
+		anchors.leftMargin: 213
+		anchors.top: parent.top
+		anchors.topMargin: 57
+
+		buttonCount: 4
+		buttonTexts: ["空调", "通风加热", "滤净", "空调设置"]
+		fontPixelSize: 26
+
+		backgroundWidth: 50
+		backgroundHeight: 8
+	}
+
 	Image
 	{
 		id: leftTemperatureImage
@@ -230,7 +248,7 @@ Item
 		id: leftRect
 		width: 340
 		height: 300
-		x: 220
+		x: 240
 		y: 200
 		z: backgroundImage.z + 1
 		color: "transparent"
@@ -281,7 +299,7 @@ Item
 		emitterHeight: 30
 		source: "qrc:/images/images/AC/fog.png"
 
-		x: 190
+		x: 220
 		y: 280
 		z: leftRect.z + 1
 

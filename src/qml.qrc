@@ -15,5 +15,6 @@
         <file>components/IconButton.qml</file>
         <file>components/TemperatureList.qml</file>
         <file>components/ParticleWindSystem.qml</file>
+        <file>components/FunctionsBar.qml</file>
     </qresource>
 </RCC>
