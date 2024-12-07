@@ -85,5 +85,15 @@
         <file>images/AC/mask_h.png</file>
         <file>images/AC/mask_v.png</file>
         <file>images/AC/right_temperatur_background.png</file>
+        <file>images/Settings/button.png</file>
+        <file>images/Settings/center_background.png</file>
+        <file>images/Settings/function_background.png</file>
+        <file>images/Settings/left_background.png</file>
+        <file>images/Settings/left_selected.png</file>
+        <file>images/Settings/miles.png</file>
+        <file>images/Settings/switch_off.png</file>
+        <file>images/Settings/switch_on.png</file>
+        <file>images/Settings/vehicle.png</file>
+        <file>images/Settings/vehicle_condition_good.png</file>
     </qresource>
 </RCC>
