@@ -41,6 +41,9 @@ public:
 	void setControlCenterWLANStatus(bool status);
 	bool getControlCenterBluetoothStatus();
 	void setControlCenterBluetoothStatus(bool status);
+
+	int getSettingsFunctionValue();
+	void setSettingsFunctionValue(int val);
 signals:
 	void pageIndexChanged();
 	void previousPageIndexChanged();
@@ -54,6 +57,8 @@ signals:
 	void controlCenterBluetoothStatusChanged();
 
 	void updateDateTime(QString data, QString time);
+
+	void settingsFunctionValueChanged();
 
 private slots:
 	void onUpdateTimer();
@@ -77,6 +82,8 @@ private:
 	bool control_center_bluetooth_status_;
 	bool control_center_position_status_;
 
+	int settings_function_value_;
+
 	QTimer* update_timer_;
 private:
 	Q_PROPERTY(int pageIndex				READ getPageIndex				WRITE setPageIndex			NOTIFY pageIndexChanged FINAL)
@@ -96,6 +103,7 @@ private:
 	Q_PROPERTY(int controlCenterBluetoothStatus		READ getControlCenterBluetoothStatus		WRITE setControlCenterBluetoothStatus	NOTIFY controlCenterBluetoothStatusChanged	FINAL)
 	Q_PROPERTY(int controlCenterPositionStatus		READ getControlCenterPositionStatus			WRITE setControlCenterPositionStatus	NOTIFY controlCenterPositionStatusChanged	FINAL)
 
+	Q_PROPERTY(int settingsFunctionValue			READ getSettingsFunctionValue				WRITE setSettingsFunctionValue	NOTIFY settingsFunctionValueChanged	FINAL)
 };
 
 #endif

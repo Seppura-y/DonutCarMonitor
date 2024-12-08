@@ -15,12 +15,12 @@ Item
     property int selectedIndex: 0 // 当前选中的按钮索引
     property var buttonTexts: ["功能1", "功能2", "功能3", "功能4", "功能5"] // 按钮文本数组，可动态指定
 
-    property int buttonCount: 2 // 可通过外部指定按钮数量
+    property int buttonCount: buttonTexts.length // 可通过外部指定按钮数量
 
     property real buttonWidth: isVertical ? 204 : width / buttonCount
     property real buttonHeight: isVertical ? height / buttonCount : 70
 
-    property int backgroundWidth: buttonHeight
+    property int backgroundWidth: buttonWidth
     property int backgroundHeight: buttonHeight
     //property int offset: (buttonWidth - backgroundWidth) / 2
     property int offset: isVertical? (buttonHeight - backgroundHeight) / 2 : (buttonWidth - backgroundWidth) / 2
@@ -228,7 +228,7 @@ Item
             id: columnComponent
             Column
             {
-                anchors.fill: parent
+                //anchors.fill: parent
 
                 Repeater
                 {

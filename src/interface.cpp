@@ -193,6 +193,21 @@ void Interface::setControlCenterBluetoothStatus(bool status)
     emit controlCenterBluetoothStatusChanged();
 }
 
+int Interface::getSettingsFunctionValue()
+{
+    return settings_function_value_;
+}
+
+void Interface::setSettingsFunctionValue(int val)
+{
+    if (settings_function_value_ == val)
+    {
+        return;
+    }
+    settings_function_value_ = val;
+    emit settingsFunctionValueChanged();
+}
+
 int Interface::getSettingPageIndex()
 {
     return s_page_setting_;

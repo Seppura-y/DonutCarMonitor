@@ -74,6 +74,8 @@ Item
 
 	AirCondControlBar
 	{
+		id: acControlBar
+
 		z: parent.z + 1
 
 		width: 1305
@@ -107,6 +109,114 @@ Item
 
 		blCornerRadius: 0
 		brCornerRadius: 0
+
+		selectedIndex: ui.settingsFunctionValue
+
+		onSelectedIndexChanged:
+		{
+			ui.settingsFunctionValue = selectedIndex
+		}
+	}
+
+	Image
+	{
+		id: centerBackgroundImage
+
+		width: 1099
+		height: 705
+
+		anchors.left: parent.left
+		anchors.leftMargin: 276
+		anchors.top: parent.top
+		anchors.topMargin: 151
+
+		source: "qrc:/images/images/Settings/center_background.png"
+		fillMode: Image.PreserveAspectFit
+	}
+
+	Label
+	{
+		id: daysLabel1
+		width: 90
+		height: 26
+		anchors.left: parent.left
+		anchors.leftMargin: 1168
+		anchors.top: parent.top
+		anchors.topMargin: 235
+		verticalAlignment: Text.AlignVCenter
+		text: qsTr("已安全陪伴您 ")
+		color: "#9AFFFFFF"
+		font.pixelSize: 16
+	}
+
+	Label
+	{
+		id: daysLabel
+		width: 50
+		height: 32
+		anchors.left: daysLabel1.right
+		anchors.leftMargin: 10
+		anchors.top: parent.top
+		anchors.topMargin: 230
+		horizontalAlignment: Text.AlignHCenter
+		verticalAlignment: Text.AlignVCenter
+		text: qsTr("267")
+		color: "#FFFFFF"
+		font.pixelSize: 24
+		font.bold: true
+	}
+
+	Label
+	{
+		id: daysLabel2
+		width: 32
+		height: 26
+		anchors.left: daysLabel.right
+		anchors.leftMargin: 5
+		anchors.top: parent.top
+		anchors.topMargin: 235
+		verticalAlignment: Text.AlignVCenter
+		text: qsTr(" 天")
+		color: "#9AFFFFFF"
+		font.pixelSize: 16
+	}
+
+	Image
+	{
+		width: 472
+		height: 182
+		anchors.left: parent.left
+		anchors.leftMargin:870
+		anchors.top: parent.top
+		anchors.topMargin: 417
+		source: "qrc:/images/images/Settings/vehicle.png"
+		fillMode: Image.PreserveAspectFit
+	}
+
+	Image
+	{
+		id: vehicleConditionImage
+		width: 167
+		height: 28
+		anchors.left: parent.left
+		anchors.leftMargin: 1160
+		anchors.top: parent.top
+		anchors.topMargin: 637
+		source: "qrc:/images/images/Settings/vehicle_condition_good.png"
+		fillMode: Image.PreserveAspectFit
+	}
+
+	Image
+	{
+		id: milesImage
+		width: 149
+		height: 74
+		anchors.left: parent.left
+		anchors.leftMargin: 1178
+		anchors.top: parent.top
+		anchors.topMargin: 294
+		source: "qrc:/images/images/Settings/miles.png"
+		fillMode: Image.PreserveAspectFit
 	}
 
 	FunctionsBar
@@ -143,6 +253,32 @@ Item
 		    orientation: Gradient.Vertical
 		    GradientStop { position: 0.0; color: "#111513" }
 		    GradientStop { position: 1.0; color: "#414c5a" }
+		}
+	}
+
+	SettingsList
+	{
+		id: settingsList
+
+		width: 537
+		height: 705
+
+		contentWidth: 405
+		contentHeight: 3200
+
+		anchors.left: parent.left
+		anchors.leftMargin: 276
+		anchors.top: parent.top
+		anchors.topMargin: 151
+
+		onMoveStarted:
+		{
+			acControlBar.visible = false
+		}
+
+		onMoveEnded:
+		{
+			acControlBar.visible = true
 		}
 	}
 }
