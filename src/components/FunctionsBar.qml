@@ -23,29 +23,19 @@ Item
     property int backgroundWidth: buttonHeight
     property int backgroundHeight: buttonHeight
     //property int offset: (buttonWidth - backgroundWidth) / 2
-    property int offset: isVertical? 0 : (buttonWidth - backgroundWidth) / 2
+    property int offset: isVertical? (buttonHeight - backgroundHeight) / 2 : (buttonWidth - backgroundWidth) / 2
+
+    property int tlCornerRadius: 20
+    property int trCornerRadius: 20
+    property int blCornerRadius: 20
+    property int brCornerRadius: 20
 
     property Gradient gradientInstance: Gradient
     {
-        orientation: Gradient.Vertical
-        GradientStop { position: 1.0; color: background }
+        orientation: isVertical ? Gradient.Vertical : Gradient.Horizontal
         GradientStop { position: 0.0; color: background }
+        GradientStop { position: 1.0; color: background }
     }
-
-    //Rectangle
-    //{
-    //    anchors.fill: parent
-    //    //color: parent.background
-    //
-    //    gradient : Gradient
-    //    {
-    //        orientation: Gradient.Vertical
-    //        GradientStop { position: 1.0; color: "#414c5a" }
-    //        GradientStop { position: 0.0; color: "#111513" }
-    //    }
-    //    //radius: isVertical ? 0 : parent.height / 2
-    //    radius: buttonHeight / 2
-    //}
 
     Item
     {
@@ -65,20 +55,20 @@ Item
                 ctx.beginPath();
             
                 // Top-left corner
-                ctx.moveTo(20, 0);
-                ctx.arcTo(0, 0, 0, 20, 20);
+                ctx.moveTo(tlCornerRadius, 0);
+                ctx.arcTo(0, 0, 0, tlCornerRadius, tlCornerRadius);
     
                 // Bottom-left corner
-                ctx.lineTo(0, height - 60);
-                ctx.arcTo(0, height, 60, height, isVertical ? 40 : 20);
+                ctx.lineTo(0, height - blCornerRadius);
+                ctx.arcTo(0, height, blCornerRadius, height, blCornerRadius);
     
                 // Bottom-right corner
-                ctx.lineTo(width - 20, height);
-                ctx.arcTo(width, height, width, height - 20, 20);
+                ctx.lineTo(width - brCornerRadius, height);
+                ctx.arcTo(width, height, width, height - brCornerRadius, brCornerRadius);
     
                 // Top-right corner
-                ctx.lineTo(width, 20);
-                ctx.arcTo(width, 0, width - 20, 0, 20);
+                ctx.lineTo(width, trCornerRadius);
+                ctx.arcTo(width, 0, width - trCornerRadius, 0, trCornerRadius);
     
                 ctx.closePath();
                 ctx.clip();
@@ -97,7 +87,8 @@ Item
     {
         id: selectedRectangle
         x: root.isVertical ? root.offset : selectedIndex * root.buttonWidth + root.offset
-        y: root.isVertical ? selectedIndex * root.buttonWidth + root.offset : root.offset
+        //y: root.isVertical ? selectedIndex * root.buttonHeight + root.offset : root.offset
+        y: root.isVertical ? 20 : root.offset
 
         width: root.backgroundWidth
         height: root.backgroundHeight

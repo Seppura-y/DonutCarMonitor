@@ -104,6 +104,9 @@ Item
 
 		backgroundWidth: 50
 		backgroundHeight: 8
+
+		blCornerRadius: 0
+		brCornerRadius: 0
 	}
 
 	FunctionsBar
@@ -129,6 +132,11 @@ Item
 		//backgroundHeight: parent.height
 
 		isVertical: true
+
+		tlCornerRadius: 0
+		trCornerRadius: 0
+		blCornerRadius: 60
+		brCornerRadius: 60
 		
 		gradientInstance : Gradient
 		{
