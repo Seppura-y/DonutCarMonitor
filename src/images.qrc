@@ -95,5 +95,34 @@
         <file>images/Settings/switch_on.png</file>
         <file>images/Settings/vehicle.png</file>
         <file>images/Settings/vehicle_condition_good.png</file>
+        <file>images/ControlCenter/auto_rotation_off.png</file>
+        <file>images/ControlCenter/auto_rotation_on.png</file>
+        <file>images/ControlCenter/background.png</file>
+        <file>images/ControlCenter/bluetooth_off.png</file>
+        <file>images/ControlCenter/bluetooth_on.png</file>
+        <file>images/ControlCenter/brightness.png</file>
+        <file>images/ControlCenter/brightness_off.png</file>
+        <file>images/ControlCenter/clairvoyance_off.png</file>
+        <file>images/ControlCenter/clairvoyance_on.png</file>
+        <file>images/ControlCenter/defrost_off.png</file>
+        <file>images/ControlCenter/defrost_on.png</file>
+        <file>images/ControlCenter/dynamic_suspension_off.png</file>
+        <file>images/ControlCenter/dynamic_suspension_on.png</file>
+        <file>images/ControlCenter/esp_off.png</file>
+        <file>images/ControlCenter/esp_on.png</file>
+        <file>images/ControlCenter/hud_off.png</file>
+        <file>images/ControlCenter/hud_on.png</file>
+        <file>images/ControlCenter/mute.png</file>
+        <file>images/ControlCenter/romote_postion_off.png</file>
+        <file>images/ControlCenter/romote_postion_on.png</file>
+        <file>images/ControlCenter/theme_mode_off.png</file>
+        <file>images/ControlCenter/theme_mode_on.png</file>
+        <file>images/ControlCenter/ventilation_off.png</file>
+        <file>images/ControlCenter/ventilation_on.png</file>
+        <file>images/ControlCenter/volume.png</file>
+        <file>images/ControlCenter/window_off.png</file>
+        <file>images/ControlCenter/window_on.png</file>
+        <file>images/ControlCenter/wlan_off.png</file>
+        <file>images/ControlCenter/wlan_on.png</file>
     </qresource>
 </RCC>

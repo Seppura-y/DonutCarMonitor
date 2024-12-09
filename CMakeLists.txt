@@ -11,13 +11,13 @@ find_package(Qt6 6.6 REQUIRED COMPONENTS
     Core
     Qml
     Quick 
-    
+    Gui
+
     Quick3D
     Quick3DHelpers
     Quick3DEffects
     Quick3DParticles REQUIRED
 )
-
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -167,6 +167,7 @@ target_link_libraries(${PROJECT_NAME}
     Qt6::Quick3DHelpers
     Qt6::Quick3DEffects
     Qt6::Quick3DParticles
+
     #Qt6::Quick3DHelpersImpl
 )
 

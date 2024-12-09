@@ -17,5 +17,8 @@
         <file>components/ParticleWindSystem.qml</file>
         <file>components/FunctionsBar.qml</file>
         <file>components/SettingsList.qml</file>
+        <file>components/IconSlider.qml</file>
+        <file>components/IconSwitch.qml</file>
+        <file>components/SwipeArea.qml</file>
     </qresource>
 </RCC>
