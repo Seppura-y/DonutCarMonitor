@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/DonutCarMonitor">
+        <file>textures/NordnesPark.hdr</file>
+    </qresource>
+</RCC>

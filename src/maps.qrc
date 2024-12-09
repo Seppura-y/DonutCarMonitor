@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/DonutCarMonitor">
+        <file>maps/bumpB.png</file>
+        <file>maps/carpet.png</file>
+        <file>maps/icons_xiaomi.png</file>
+        <file>maps/intD.png</file>
+        <file>maps/perf2.png</file>
+        <file>maps/seam.png</file>
+        <file>maps/seamB.png</file>
+        <file>maps/seamB_o.png</file>
+        <file>maps/seatbelt.png</file>
+        <file>maps/sidewall.png</file>
+        <file>maps/speakers.png</file>
+        <file>maps/wood.png</file>
+    </qresource>
+</RCC>

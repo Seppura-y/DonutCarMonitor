@@ -49,6 +49,7 @@ Window
             //case ui.pageControlCenter:  pageLoader.source = "hmi/ControlCenter.qml"; break;
             case ui.pageSetting:        pageLoader.source = "hmi/Setting.qml"; break;
             case ui.pageApp:            pageLoader.source = "hmi/App.qml"; break;
+            case ui.pageCarModel:       pageLoader.source = "hmi/CarModel.qml"; break;
         }
     }
 

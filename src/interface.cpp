@@ -102,6 +102,11 @@ int Interface::getAirCondPageIndex()
     return s_page_air_cond_;
 }
 
+int Interface::getCarModelPageIndex()
+{
+    return s_page_car_model_;
+}
+
 int Interface::getACFanLevel()
 {
     return ac_fan_level_;

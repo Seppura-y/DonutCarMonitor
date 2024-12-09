@@ -41,7 +41,10 @@ Item
                 opacity: parent.down ? 0.6 : 1
             }
 
-            onClicked: mode()
+            onClicked: 
+            {
+                ui.pageIndex = ui.pageSetting
+            }
         }
 
         // 导航

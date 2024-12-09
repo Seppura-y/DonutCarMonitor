@@ -11,6 +11,10 @@ build
 # 忽略 bin 文件夹中的所有内容
 bin/*
 
+maps
+textures
+meshes
+
 # 但不忽略 bin/assets 文件夹
 !bin/assets
 

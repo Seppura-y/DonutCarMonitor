@@ -606,7 +606,7 @@ Item
 
 		onClicked:
 		{
-			ui.pageIndex = ui.pageSetting
+			ui.pageIndex = ui.pageCarModel
 		}
 
 		// 天数

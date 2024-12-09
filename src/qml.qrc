@@ -20,5 +20,13 @@
         <file>components/IconSlider.qml</file>
         <file>components/IconSwitch.qml</file>
         <file>components/SwipeArea.qml</file>
+        <file>components/ControlButton.qml</file>
+        <file>components/ControlSlider.qml</file>
+        <file>components/ParticleWind3DItem.qml</file>
+        <file>components/ParticleWind3DSystem.qml</file>
+        <file>components/RollbackAni.qml</file>
+        <file>components/TRSController.qml</file>
+        <file>hmi/CarModel.qml</file>
+        <file>SU7Model.qml</file>
     </qresource>
 </RCC>

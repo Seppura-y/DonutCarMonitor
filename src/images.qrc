@@ -124,5 +124,62 @@
         <file>images/ControlCenter/window_on.png</file>
         <file>images/ControlCenter/wlan_off.png</file>
         <file>images/ControlCenter/wlan_on.png</file>
+        <file>images/AddressBook_48.png</file>
+        <file>images/animation.png</file>
+        <file>images/ArnaudLonysConstruct.hdr</file>
+        <file>images/arrow_icon.png</file>
+        <file>images/Arrow_Left.png</file>
+        <file>images/Arrow_Right.png</file>
+        <file>images/AudioPlayer_48.png</file>
+        <file>images/Butterfly_48.png</file>
+        <file>images/Camera_48.png</file>
+        <file>images/car.png</file>
+        <file>images/Chow.png</file>
+        <file>images/Concha_48.png</file>
+        <file>images/contact.png</file>
+        <file>images/Cube_48.png</file>
+        <file>images/DateBook_48.png</file>
+        <file>images/door.png</file>
+        <file>images/DoschAsiaRoads.hdr</file>
+        <file>images/dot.png</file>
+        <file>images/dust.png</file>
+        <file>images/EMail_48.png</file>
+        <file>images/fog.png</file>
+        <file>images/Global_48.png</file>
+        <file>images/glowdot.png</file>
+        <file>images/icon_settings.png</file>
+        <file>images/interior.png</file>
+        <file>images/lake.jpg</file>
+        <file>images/LaoWang.png</file>
+        <file>images/leftSourceOff.png</file>
+        <file>images/leftSourceOn.png</file>
+        <file>images/lighting.png</file>
+        <file>images/LiXiangL9.jpg</file>
+        <file>images/midelSourceOff.png</file>
+        <file>images/midelSourceOn.png</file>
+        <file>images/Mike.png</file>
+        <file>images/NordnesPark.hdr</file>
+        <file>images/Pencil_48.png</file>
+        <file>images/portrait.png</file>
+        <file>images/position.png</file>
+        <file>images/QQ.png</file>
+        <file>images/qt_logo.png</file>
+        <file>images/Real_48.png</file>
+        <file>images/rightSourceOff.png</file>
+        <file>images/rightSourceOn.png</file>
+        <file>images/RiverSide.hdr</file>
+        <file>images/rotation.png</file>
+        <file>images/Search_48.png</file>
+        <file>images/Setting_48.png</file>
+        <file>images/smoke.png</file>
+        <file>images/snowflake.png</file>
+        <file>images/sphere.png</file>
+        <file>images/star2.png</file>
+        <file>images/star3.png</file>
+        <file>images/switch.png</file>
+        <file>images/TodoList_48.png</file>
+        <file>images/trunk.png</file>
+        <file>images/VideoPlayer_48.png</file>
+        <file>images/wheel.png</file>
     </qresource>
 </RCC>
