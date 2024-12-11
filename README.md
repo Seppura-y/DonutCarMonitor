@@ -4,12 +4,13 @@
 - 支持MSVC、MinGW，release和debug编译
 - 修改build.bat中的Qt，改为你的Qt安装目录的绝对路径
 - 然后根据需要分别设置MSVC或者MinGW的cmake目录的绝对路径
+- 本项目是参考B站Dennis-X大佬的教程，并在其基础上加以改进，融合了车机界面和车模型浏览功能
 # MSVC构建
 - build.bat修改完成后直接运行即可，MSVC构建后还需运行install.bat打包相关的库文件到执行目录才能在VisualStudio中调试项目
 # MinGW构建
 - 使用QtCreator打开，不支持VisualStudio
 
-- 本项目是参考B站Dennis-X大佬的教程，并在其基础上加以改进，融合了车机界面和车模型浏览功能
+
 
 # 运行效果图
 - 主页
