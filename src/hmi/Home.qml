@@ -418,6 +418,11 @@ Item
 
 		hoverEnabled: false
 
+		onClicked:
+		{
+			ui.pageIndex = ui.pagePlayer
+		}
+
 		background: Image
 		{
 			width: parent.width

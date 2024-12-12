@@ -107,6 +107,11 @@ int Interface::getCarModelPageIndex()
     return s_page_car_model_;
 }
 
+int Interface::getPlayerPageIndex()
+{
+    return s_page_player_;
+}
+
 int Interface::getACFanLevel()
 {
     return ac_fan_level_;

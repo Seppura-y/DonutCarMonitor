@@ -74,6 +74,15 @@ namespace Donut
         //renderer_api_->init();
 
         //renderer_api_->glCreateProgram();
+
+        if (decoded_frame_ == nullptr)
+        {
+            decoded_frame_ = av_frame_alloc();
+        }
+
+        test_texture_ = std::make_shared<Donut::OpenGLTexture2D>("assets/textures/cat.jpg");
+
+        is_paused_ = false;
     }
 
     DonutScene::~DonutScene()
@@ -161,6 +170,31 @@ namespace Donut
     {
         av_manager_ = manager;
     }
+
+    //QSGNode* DonutScene::updatePaintNode(QSGNode* old_node, UpdatePaintNodeData* update_paintnode_data)
+    //{
+    //    // 使用QML的上下文进行渲染
+    //    QSGRendererInterface* rif = window()->rendererInterface();
+    //    if (!rif) {
+    //        return nullptr;
+    //    }
+    //
+    //    // 检查是否是OpenGL后端
+    //    if (rif->graphicsApi() == QSGRendererInterface::OpenGL)
+    //    {
+    //        // 获取OpenGL上下文
+    //        QOpenGLContext* ctx = static_cast<QOpenGLContext*>(
+    //            rif->getResource(window(), QSGRendererInterface::OpenGLContextResource));
+    //
+    //        if (ctx)
+    //        {
+    //            // 执行OpenGL操作
+    //            // ...
+    //        }
+    //    }
+    //
+    //    return old_node;
+    //}
 
     void DonutScene::onItemInitialized()
     {

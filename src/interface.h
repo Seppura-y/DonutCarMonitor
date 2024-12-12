@@ -26,6 +26,7 @@ public:
 	static int getControlCenterPageIndex();
 	static int getAirCondPageIndex();
 	static int getCarModelPageIndex();
+	static int getPlayerPageIndex();
 
 	int getACFanLevel();
 	void setACFanLevel(int val);
@@ -72,6 +73,7 @@ private:
 	const static int s_page_control_center_ = 3;
 	const static int s_page_air_cond_ = 4;
 	const static int s_page_car_model_ = 5;
+	const static int s_page_player_ = 6;
 
 	int page_index_;
 	int previous_page_index_;
@@ -97,6 +99,7 @@ private:
 	Q_PROPERTY(int pageControlCenter		READ getControlCenterPageIndex	CONSTANT FINAL)
 	Q_PROPERTY(int pageAirCond				READ getAirCondPageIndex		CONSTANT FINAL)
 	Q_PROPERTY(int pageCarModel				READ getCarModelPageIndex		CONSTANT FINAL)
+	Q_PROPERTY(int pagePlayer				READ getPlayerPageIndex			CONSTANT FINAL)
 
 	Q_PROPERTY(int acFanLevel				READ getACFanLevel				WRITE setACFanLevel			NOTIFY acFanLevelChanged FINAL)
 	Q_PROPERTY(int acLeftTemperature		READ getACLeftTemperature		WRITE setACLeftTemperature	NOTIFY acLeftTemperatureChanged FINAL)

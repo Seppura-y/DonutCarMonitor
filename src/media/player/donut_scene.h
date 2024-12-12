@@ -29,6 +29,10 @@ namespace Donut
 		DonutScene(QQuickItem* parent = nullptr);
 		~DonutScene();
 
+		//static DonutScene* createSingleton(QQmlEngine* engine, QJSEngine* scriptEngine) {
+		//	return new DonutScene();
+		//}
+
 		//////////// for test ////////////
 		qreal t() const { return delta_t_; }
 		void setT(qreal t);
@@ -45,6 +49,8 @@ namespace Donut
 
 		// player
 		Q_INVOKABLE void setQMLAvManager(DonutQMLAVManager* manager);
+
+		//QSGNode* updatePaintNode(QSGNode* old_node, UpdatePaintNodeData* update_paintnode_data) override;
 
 	signals:
 		void tChanged();

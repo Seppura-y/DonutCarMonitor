@@ -13,18 +13,28 @@
 #include <QQuickItem>
 #include <QDateTime>
 
+#include <QJSEngine>
+#include <QQmlEngine>
+#include <QObject>
+
+#include <qqml.h>
+
 namespace Donut
 {
 
 	class DonutQMLAVManager : public QQuickItem, public IDonutAVBaseHandler
 	{
 		Q_OBJECT
-		QML_ELEMENT
+		QML_SINGLETON
 	public:
 		explicit DonutQMLAVManager(QQuickItem* parent = nullptr);
 		virtual ~DonutQMLAVManager();
 
-		static DonutQMLAVManager* getInstance();
+		Q_INVOKABLE static DonutQMLAVManager* createSingleton(QQmlEngine* engine, QJSEngine* scriptEngine) {
+			return DonutQMLAVManager::getInstance();
+		}
+
+		Q_INVOKABLE static DonutQMLAVManager* getInstance();
 		//static QObject* singletonProvider(QQmlEngine* engine, QJSEngine* scriptEngine);
 
 
@@ -202,6 +212,7 @@ namespace Donut
 		friend class IDonutVideoView;
 		friend class DonutScene;
 	};
+
 }
 
 #endif

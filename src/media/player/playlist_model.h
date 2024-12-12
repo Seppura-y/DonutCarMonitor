@@ -19,6 +19,10 @@ public:
 	};
 
 public:
+	Q_INVOKABLE static PlaylistModel* createSingleton(QQmlEngine* engine, QJSEngine* scriptEngine)
+	{
+		return PlaylistModel::getInstance();
+	}
 	static PlaylistModel* getInstance();
 	PlaylistModel(QObject* parent = nullptr);
 

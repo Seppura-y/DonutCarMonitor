@@ -13,65 +13,74 @@ Item
     id: window
 
     visible: true
-    minimumWidth: 800
-    minimumHeight: 450
-    width: 1280
-    height: 720
-    title: "DonutQMLPlayer"
 
-    property bool isMaterialUI: Utils.environmentVariable("QT_QUICK_CONTROLS_STYLE") == "Material"
+    width: 1414
+    height: 856
+    x: 108
+    y: 0
+    //minimumWidth: 800
+    //minimumHeight: 450
+    //width: 1280
+    //height: 720
+    //title: "DonutQMLPlayer"
+
+    //property bool isMaterialUI: Utils.environmentVariable("QT_QUICK_CONTROLS_STYLE") == "Material"
+    property bool isMaterialUI: true
     property int soundVolume: 100
 
-    flags: Qt.Window | (isMaterialUI ? Qt.FramelessWindowHint : 0)
+    property DonutQMLAVManager qmlAVManager: null
+    property DonutScene glScene: null
 
-    color: SkinColor.windowBackground
+    //flags: Qt.Window | (isMaterialUI ? Qt.FramelessWindowHint : 0)
+
+    //color: SkinColor.windowBackground
     Material.theme: SkinColor.darkMode ? Material.Dark : Material.Light
     Material.accent: Material.Grey
     Universal.theme: SkinColor.darkMode ? Universal.Dark : Universal.Light
 
-    DonutQMLAVManager
-    {
-        id: qmlAVManager
+    //DonutQMLAVManager
+    //{
+    //    id: qmlAVManager
+    //
+    //    Component.onCompleted:
+    //    {
+    //        console.log("DonutQMLAVManager initialized")
+    //    }
+    //
+    //    Connections
+    //    {
+    //        target: qmlAVManager
+    //        onSigUpdateTotalDurationSec: (duration)=>
+    //        {
+    //            controlBar.duration = duration
+    //        }
+    //
+    //        onSigUpdateTimePosSec: (value)=>
+    //        {
+    //            controlBar.updateTimePosSec(value)
+    //        }
+    //    }
+    //}
 
-        Component.onCompleted:
-        {
-            console.log("DonutQMLAVManager initialized")
-        }
-
-        Connections
-        {
-            target: qmlAVManager
-            onSigUpdateTotalDurationSec: (duration)=>
-            {
-                controlBar.duration = duration
-            }
-
-            onSigUpdateTimePosSec: (value)=>
-            {
-                controlBar.updateTimePosSec(value)
-            }
-        }
-    }
-
-    DonutScene
-    {
-        id: glScene
-        anchors.fill: parent
-        SequentialAnimation on delta_t_
-        {
-            NumberAnimation { to: 1; duration: 2500; easing.type: Easing.InQuad }
-            NumberAnimation { to: 0; duration: 2500; easing.type: Easing.OutQuad }
-            loops: Animation.Infinite
-            running: true
-        }
-
-        Component.onCompleted:
-        {
-            glScene.sigItemInitialized()
-            //qmlAVManager.initManager()
-            qmlAVManager.onVideoViewInitialized(glScene)
-        }
-    }
+    //DonutScene
+    //{
+    //    id: glScene
+    //    anchors.fill: parent
+    //    SequentialAnimation on delta_t_
+    //    {
+    //        NumberAnimation { to: 1; duration: 2500; easing.type: Easing.InQuad }
+    //        NumberAnimation { to: 0; duration: 2500; easing.type: Easing.OutQuad }
+    //        loops: Animation.Infinite
+    //        running: true
+    //    }
+    //
+    //    Component.onCompleted:
+    //    {
+    //        glScene.sigItemInitialized()
+    //        //qmlAVManager.initManager()
+    //        qmlAVManager.onVideoViewInitialized(glScene)
+    //    }
+    //}
 
     CoverArea
     {
@@ -88,7 +97,7 @@ Item
     {
         id: dropArea
         anchors.fill: parent
-        onDropped:
+        onDropped:(drop)=>
         {
             var url = drop.urls[0]
             PlaylistModel.addLocalFiles(drop.urls);

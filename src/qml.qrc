@@ -28,5 +28,20 @@
         <file>components/TRSController.qml</file>
         <file>hmi/CarModel.qml</file>
         <file>SU7Model.qml</file>
+        <file>playerUI/ControlBar.qml</file>
+        <file>playerUI/CoverArea.qml</file>
+        <file>playerUI/FontButton.qml</file>
+        <file>playerUI/ImageButton.qml</file>
+        <file>playerUI/Playlist.qml</file>
+        <file>playerUI/Settings.qml</file>
+        <file>playerUI/SideBar.qml</file>
+        <file>playerUI/SkinColor.qml</file>
+        <file>playerUI/VideoOptions.qml</file>
+        <file>playerUI/VolumePopup.qml</file>
+        <file>fonts/Font Awesome 6 Duotone-Solid-900.otf</file>
+        <file>fonts/Font Awesome 6 Pro-Light-300.otf</file>
+        <file>playerUI/PlayerMain.qml</file>
+        <file>playerUI/Font Awesome 6 Duotone-Solid-900.otf</file>
+        <file>playerUI/Font Awesome 6 Pro-Light-300.otf</file>
     </qresource>
 </RCC>

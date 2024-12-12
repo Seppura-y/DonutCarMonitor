@@ -93,7 +93,7 @@ namespace Donut
         }
         else
         {
-            //去掉暂停的事件
+            //去掉暂停的事�?
             if (pause_begin_ > 0)
                 last_ms_ += (GetCurrentTimeMsec() - pause_begin_);
             SDL_PauseAudio(0);
@@ -107,7 +107,7 @@ namespace Donut
         is_resampler_init_ = false;
         //this->input_spec_ = spec;
 
-        //退出上一次音频
+        //退出上一次音�?
         //SDL_PauseAudio(1);
         SDL_CloseAudio();
 
@@ -124,7 +124,7 @@ namespace Donut
         static const int next_sample_rates[] = { 0, 44100, 48000, 96000, 192000 };
         int next_sample_rate_idx = FF_ARRAY_ELEMS(next_sample_rates) - 1;
 
-        // 4.8.A.1 获取环境变量中的声道数和升到布局等信息
+        // 4.8.A.1 获取环境变量中的声道数和升到布局等信�?
         env = SDL_getenv("SDL_AUDIO_CHANNELS");
         if (env)
         {
@@ -138,7 +138,7 @@ namespace Donut
             spec.ch_layout &= ~AV_CH_LAYOUT_STEREO_DOWNMIX;
         }
 
-        // 根据channel_layout获取nb_channels，当传入参数wanted_nb_channels不匹配时，此处会作修正
+        // 根据channel_layout获取nb_channels，当传入参数wanted_nb_channels不匹配时，此处会作修�?
         int wanted_nb_channels = av_get_channel_layout_nb_channels(spec.ch_layout);
         int64_t wanted_channel_layout = spec.ch_layout;
 
@@ -270,7 +270,7 @@ namespace Donut
         sound_touch_->setTempo(playback_speed_);
         sound_touch_->setPitch(pitch_);
 
-        // 启动回调，开始播放
+        // 启动回调，开始播�?
         SDL_PauseAudioDevice(audio_dev_, 0);
 
         nb_per_second_ = this->resample_spec_.bytes_per_sec;
@@ -376,10 +376,10 @@ namespace Donut
 
         if (last_ms_ > 0)
         {
-            ms = GetCurrentTimeMsec() - last_ms_;//距离上次写入缓冲的播放时间毫秒
+            ms = GetCurrentTimeMsec() - last_ms_;//距离上次写入缓冲的播放时间毫�?
         }
 
-        //pts 毫秒换算pts的时间基数
+        //pts 毫秒换算pts的时间基�?
         if (timebase_ > 0)
         {
             ms = ms / (double)1000 / (double)timebase_;
