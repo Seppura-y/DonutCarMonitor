@@ -5,9 +5,14 @@
 #include <QQuickWindow>
 
 #include "interface.h"
+#include "log.h"
+
 
 int main(int argc, char **argv)
 {
+    Donut::Log::init();
+    qputenv("QSG_RHI_BACKEND", QByteArray("opengl"));
+
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
