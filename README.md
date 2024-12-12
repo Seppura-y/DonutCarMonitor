@@ -19,7 +19,10 @@
 - 3D车模型浏览
 ![image](https://github.com/user-attachments/assets/2316e79e-744c-40bf-a2b1-9050aa1f2303)
 - 实现车门开关动画，摄像机视角动画
-- ![image](https://github.com/user-attachments/assets/d811f711-b936-4b72-9fd9-652f92918829)
+  ![image](https://github.com/user-attachments/assets/d811f711-b936-4b72-9fd9-652f92918829)
+- 车内视角
+  ![image](https://github.com/user-attachments/assets/a21c9672-024d-4c45-a60a-8c72cc521158)
+
   
 - 实现空调出风口粒子效果，以及空调出风方向控制
   ![image](https://github.com/user-attachments/assets/94f6b3c4-6eb6-44dc-b660-10020b0a1d84)
